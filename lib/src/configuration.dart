@@ -369,7 +369,8 @@ class Configuration {
         .list()
         .firstWhere((file) =>
             file.path.endsWith('.exe') &&
-            !file.path.contains('PSFLauncher64.exe'))
+            !file.path.contains('PSFLauncher64.exe') &&
+            !file.path.contains('crashpad_handler.exe'))
         .then((file) => basename(file.path));
   }
 
